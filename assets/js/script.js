@@ -17,21 +17,25 @@ submitBtn.addEventListener("click", function() {
 });
 
 function getCurrentData(cityName) {
-    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${key}`)
+    fetch(
+            `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${key}&units=metric`
+        )
         .then(function(res) {
-            return res.json()
+            return res.json();
         })
         .then(function(data) {
-            console.log(data)
-        })
+            console.log(data);
+        });
 }
 
 function getForecastData(cityName) {
-    fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=${key}`)
+    fetch(
+            `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=${key}&units=metric`
+        )
         .then(function(res) {
-            return res.json()
+            return res.json();
         })
         .then(function(data) {
-            console.log(data)
-        })
+            console.log(data);
+        });
 }
