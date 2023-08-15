@@ -1,0 +1,279 @@
+#loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: black;
+    opacity: 1;
+    transition: all 1s;
+    z-index: 9999;
+}
+
+#loader.hide {
+    opacity: 0;
+    z-index: -1000;
+}
+
+#loader .header-title {
+    animation: letters 30s;
+    animation-delay: 1s;
+}
+
+
+/* preload images for a smooth background transition */
+
+
+/* https://stackoverflow.com/questions/53431876/preload-background-images */
+
+
+/* TODO: better less grainy background for 50d */
+
+body::after {
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    z-index: -1;
+    /* content: url(../images/01d.jpg) url(../images/01n.jpg) url(../images/02d.jpg) url(../images/02n.jpg) url(../images/03d.jpg) url(../images/03n.jpg) url(../images/04d.jpg) url(../images/04n.jpg) url(../images/05d.jpg) url(../images/05n.jpg) url(../images/10d.jpg) url(../images/10n.jpg) url(../images/11d.jpg) url(../images/11n.jpg) url(../images/13d.jpg) url(../images/13n.jpg) url(../images/50d.jpg) url(../images/50n.jpg); */
+}
+
+body {
+    background: black;
+    font-family: "Gotu", sans-serif;
+}
+
+.bg-image {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+main.bg-image {
+    background-attachment: fixed;
+    background-position: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+ul li,
+button,
+.error p {
+    color: white;
+    text-shadow: 1px 1px 5px #475686, 1px 2px 15px rgba(7, 7, 61, 0.62);
+}
+
+header {
+    z-index: 1000;
+    transition: all 1s;
+    transform: translateY(0);
+    opacity: 1;
+}
+
+header.filled {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+}
+
+header.up {
+    opacity: 0;
+    transform: translateY(-100px);
+}
+
+.header-title {
+    padding: 0.75rem 0;
+    text-transform: uppercase;
+    letter-spacing: 15px;
+    transition: letter-spacing 1s;
+}
+
+main {
+    min-height: 100vh;
+    min-height: 100dvh;
+    /* background-image: url('../images/01d.jpg'); */
+    /* set bg to animate */
+    transition: background-image 3s;
+    overflow: hidden;
+}
+
+.weather-search {
+    color: white;
+    border: none;
+    padding: 0 0.5rem;
+    font-weight: bold;
+}
+
+.weather-search:focus {
+    outline: none;
+}
+
+.search-wrapper {
+    border: 1.5px solid;
+    border-color: transparent transparent rgba(255, 255, 255, 0.15) transparent;
+    box-shadow: inset 0px -1px 0px rgba(0, 0, 0, 0.5);
+    transition: border 0.5s;
+}
+
+.weather-search:focus .search-wrapper {
+    border-color: white;
+}
+
+.weather-search::placeholder {
+    color: rgba(255, 255, 255, 0.85);
+    font-style: italic;
+}
+
+.search-button,
+.history-button {
+    color: white;
+}
+
+.search-button:hover,
+.history-button:hover {
+    color: white;
+}
+
+.city-button {
+    width: 200px;
+    padding-left: 0.25rem;
+    border: none;
+    mix-blend-mode: difference;
+}
+
+.city-button:hover:before {
+    content: "\f124";
+    font-family: "Font Awesome 6 Free";
+    font-weight: bold;
+    position: absolute;
+    top: 0.5rem;
+    left: -1rem;
+    width: 1rem;
+    height: 1rem;
+    color: white;
+    mix-blend-mode: difference;
+}
+
+#today .weather-header .badge {
+    right: -2rem;
+    font-size: 1rem;
+    mix-blend-mode: difference;
+}
+
+#forecast {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.card {
+    display: grid;
+    padding: 0;
+    min-height: 250px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.15);
+    /* background-image: url('../images/transbg.png'); */
+    backdrop-filter: blur(10px);
+    transition: background-image 1s;
+}
+
+.card:not(:first-of-type) {
+    border-top: none;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card-header {
+    width: 100%;
+    border: none;
+}
+
+#history {
+    opacity: 1;
+    max-height: 400px;
+    padding-right: 0.5rem;
+    right: 0;
+    transition: max-height 1s ease-in-out, opacity 1s ease-in-out, backdrop-filter 0.5s, box-shadow 2s ease-in-out 1s;
+    z-index: 2;
+}
+
+#history.no-show {
+    max-height: 0px;
+    opacity: 0;
+    overflow: hidden;
+    z-index: -100;
+}
+
+.error {
+    position: absolute;
+    margin-top: 0.5rem;
+}
+
+.forecast-card {
+    text-align: center;
+    width: 100%;
+}
+
+.forecast-icon {
+    margin: 0 auto;
+}
+
+@keyframes letters {
+    0%,
+    100% {
+        letter-spacing: 15px;
+        opacity: 1;
+    }
+    50% {
+        letter-spacing: 100px;
+        opacity: 0.5;
+    }
+}
+
+@media (max-width: 575.999px) {
+    header h1 {
+        width: 100%;
+        text-align: center;
+    }
+    .search-wrapper {
+        width: 100%;
+        margin: 1rem;
+    }
+    #history {
+        left: 0;
+        width: 100% !important;
+        padding: 1rem 2rem;
+        backdrop-filter: blur(10px);
+        box-shadow: 2px 20px 20px rgba(0, 0, 0, 0.3);
+    }
+}
+
+@media (max-width: 767.999px) {
+    .weather-search {
+        width: 100%;
+        min-width: 150px;
+    }
+    #forecast {
+        position: relative;
+        grid-template-columns: 1fr;
+    }
+    #today {
+        height: 100vh;
+        height: 100dvh;
+    }
+    .card:not(:first-of-type) {
+        border-left: none;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .card-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
