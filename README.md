@@ -46,6 +46,13 @@ The searched city will be added to the search history for quick access.
 
 ![](Weather%20Dashboard.png)
 
+
+## Technical Acceptance Criteria 
+
+The application retrieves weather data using the 5 Day Weather Forecast API.
+
+localStorage is used to store search history and weather data.
+
 ## Deployment Page
 
 URL : https://maxwella10.github.io/WeatherDashboard/
