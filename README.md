@@ -41,7 +41,7 @@ The searched city will be added to the search history for quick access.
 
 ## Screenshots 
 
-![]("./assets/images/
+![]("./assets/images/demo.gif")
 
 
 ## Deployment Page
