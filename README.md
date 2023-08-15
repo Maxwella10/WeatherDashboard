@@ -39,6 +39,11 @@ The current weather conditions and 5-day forecast for the city will be displayed
 The searched city will be added to the search history for quick access.
 
 
+## Screenshots 
+
+![]("./assets/images/
+
+
 ## Deployment Page
 
 URL : https://maxwella10.github.io/WeatherDashboard/
