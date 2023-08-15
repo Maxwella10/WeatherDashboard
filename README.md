@@ -5,14 +5,23 @@ Welcome to the Weather Forecast App project!  Build a dynamic weather dashboard 
 
 
 ## Features:
+
  Current weather
+ 
  5-day forecast
+ 
  Search bar
+ 
  History of searches accessible with a click of a button
+ 
  History saved to localStorage
+ 
  Smooth transitions
+ 
  Weather backgrounds for each weather type
+ 
  Animated loader
+ 
 Built using jQuery, Bootstrap 5, moment.js and Openweathermap API services.
 
 
