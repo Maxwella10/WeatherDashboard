@@ -22,7 +22,21 @@ Welcome to the Weather Forecast App project!  Build a dynamic weather dashboard 
  
  Animated loader
  
-Built using jQuery, Bootstrap 5, moment.js and Openweathermap API services.
+Built using jQuery, Bootstrap 5, moment.js, day.js and Openweathermap API services.
+
+
+Instructions 📝
+To use the Weather Forecast App:
+
+Open the Weather Forecast App in your web browser. 
+
+Enter the name of the city you want to get weather information for.
+
+Click the "Search" button.
+
+The current weather conditions and 5-day forecast for the city will be displayed.
+
+The searched city will be added to the search history for quick access.
 
 
 ## Deployment Page
