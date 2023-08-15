@@ -55,4 +55,4 @@ localStorage is used to store search history and weather data.
 
 ## Deployment Page
 
-URL : https://maxwella10.github.io/WeatherDashboard/
+Accessing the Weather Forecast App : https://maxwella10.github.io/WeatherDashboard/
