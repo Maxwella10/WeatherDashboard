@@ -44,6 +44,8 @@ The searched city will be added to the search history for quick access.
 ![](./assets/images/demo.gif)
 
 
+![](Weather%20Dashboard.png)
+
 ## Deployment Page
 
 URL : https://maxwella10.github.io/WeatherDashboard/
