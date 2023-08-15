@@ -25,7 +25,7 @@ Welcome to the Weather Forecast App project!  Build a dynamic weather dashboard 
 Built using jQuery, Bootstrap 5, moment.js, day.js and Openweathermap API services.
 
 
-Instructions 📝
+## Instructions 📝
 To use the Weather Forecast App:
 
 Open the Weather Forecast App in your web browser. 
