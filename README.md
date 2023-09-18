@@ -58,4 +58,4 @@ localStorage is used to store search history and weather data.
 Accessing the Weather Forecast App : https://maxwella10.github.io/WeatherDashboard/
 
 
-© 2023 Maxwell Acha Confidential and Proprietary. All Rights Reserved.
+© 2023 Maxwell Acha Confidential and Properties. All Rights Reserved.
